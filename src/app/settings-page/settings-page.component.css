@@ -1,0 +1,81 @@
+.settings-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.settings-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.setting {
+  margin-bottom: 15px;
+}
+
+.setting label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.setting input[type="number"],
+.setting select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.radio-group {
+  display: flex;
+}
+
+.radio-group input[type="radio"] {
+  display: none;
+}
+
+.radio-group label {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.radio-group label:hover {
+  background-color: #f0f0f0;
+}
+
+.radio-group input[type="radio"]:checked + label {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.radio-group input[type="radio"]:checked + label:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+#save-settings-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#save-settings-btn:hover {
+  background-color: #0056b3;
+}

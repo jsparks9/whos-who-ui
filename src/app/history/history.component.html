@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="d-flex flex-column align-items-center">
+        <h2 class="p-4 pacifico-regular">Attempt History</h2>
+    </div>
+    <table class="table table-striped table-hover shadow">
+        <thead>
+            <tr>
+                <th scope="col">Album Cover</th>
+                <th scope="col">Album Name</th>
+                <th scope="col">Artist</th>
+                <th scope="col">Score</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let attempt of attempts">
+                    <td><img src="{{attempt.albumCover}}" alt=""></td>
+                    <td>{{attempt.albumName}}</td>
+                    <td>{{attempt.artistName}}</td>
+                    <td>{{attempt.score}}</td>
+                    <td>{{attempt.taken | date}}</td>
+
+                </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,50 @@
+* {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* supported by most modern browsers */
+}
+
+.wrapper {
+    padding: 0px 20px 0px 20px;
+    display: flex;
+}
+
+.left {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    display: flex;
+}
+
+.no-stack {
+    display: flex;
+    flex-direction: row;
+}
+a:hover {
+    color: rgba(255, 255, 255, .75);
+}
+a {
+    padding-top: 0.5em;
+    color: rgba(255, 255, 255, .5);
+}
+
+.right {
+    margin-top: -0.5em;
+    display: flex;
+    justify-content: flex-end;
+    position:absolute;
+    right: 1.1em;
+    user-select: none;
+}
+
+li, .navbar-brand {
+    cursor: pointer;
+}
+
+.header {
+    position:fixed;
+    top:0;
+    width: 100%;
+    z-index: 1;
+}

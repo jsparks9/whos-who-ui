@@ -1,0 +1,20 @@
+<header class="header">
+    <nav class="wrapper navbar navbar-expand-md navbar-dark primary-background">
+        <div class="left">
+            <div class="navbar-brand pacifico-regular" [routerLink]="['home/' , getUsername()]">Yfitops</div>
+            
+            <div class="container-fluid no-stack">
+                <a *ngIf="isUserLoggedIn()" class="nav-link" [routerLink]="['home/' , getUsername()]">Home</a>
+                <a *ngIf="isUserLoggedIn()" class="nav-link" routerLink="/leaderboard">Leaderboard</a>
+                <a *ngIf="isUserLoggedIn()" class="nav-link" routerLink="/settings">Settings</a>
+                <a *ngIf="isUserLoggedIn()" class="nav-link" routerLink="/history">History</a>
+                <a *ngIf="isUserLoggedIn()" class="nav-link" routerLink="/playlists">Playlists</a>
+
+            </div>
+        </div>
+        <div class="right">
+            <a *ngIf="!isUserLoggedIn()" class="nav-link m-1 p-1" routerLink="/login">Login</a>
+            <a *ngIf="isUserLoggedIn()" routerLink="" (click)="logout()" class="nav-link m-1 p-1">Logout</a>
+        </div>
+    </nav>
+</header>

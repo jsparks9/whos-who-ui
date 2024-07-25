@@ -1,0 +1,30 @@
+<div class=" game-page-container">
+
+    <app-searcher *ngIf="!isReadyToTest"
+            (albumSelected)="receiveAlbum($event)"
+            (tracksSelected)="receiveTracks($event)"
+            (searchFinished)="searchFinished($event)"
+    ></app-searcher>
+
+    <ng-container *ngIf="isReadyToTest && !isFinished">
+        <p class="p-4">Question: {{questionNumber}} {{correct}} - {{incorrect}}</p>
+        <img src="{{album.images[1].url}}" alt="Music Not image" class="music-cover">
+        <audio #audioPlayer controls>
+            <source [src]="preview" type="audio/mpeg">
+        </audio>
+        <div class="flex-column d-flex">
+                <div *ngFor="let item of currentQuestion.options; let i = index" >
+                    <input  type="radio" id="option{{item}}" name="answer" value="{{item}}" [(ngModel)]="selection">
+                    <label  class="pl-1" for="option{{item}}">{{item}}</label>
+                </div>
+                <button  class="btn btn-success m-5" (click)="onSubmit()">Submit</button>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="isFinished">
+        <h1 class="p-4 pacifico-regular">Game Over! Thanks for playing!</h1>
+        <h2 class="p-4 pacifico-regular">Your score is: {{correct}}/{{questionNumber}}</h2>
+        <button  class="btn btn-success m-5" (click)="save()">Save your results?</button>
+    </ng-container>
+
+</div>
